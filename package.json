@@ -11,7 +11,8 @@
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "build:html": "babel-node tools/buildHtml.js",
-    "prebuild": "npm run clean-dist && npm run build:html",
+    "build:mdl": "babel-node tools/buildMDL.js",
+    "prebuild": "npm run clean-dist && npm run build:mdl && npm run build:html",
     "build": "npm run test && babel-node tools/build.js && npm run open:dist",
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel-core/register --recursive \"./src/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch"
@@ -25,7 +26,8 @@
     "react-dom": "0.14.7",
     "react-redux": "4.4.0",
     "react-router": "2.0.0",
-    "redux": "3.3.1"
+    "redux": "3.3.1",
+    "request": "2.69.0"
   },
   "devDependencies": {
     "babel-cli": "6.5.1",
@@ -48,9 +50,11 @@
     "eslint-plugin-react": "4.0.0",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
+    "fs-extra": "0.26.7",
     "mocha": "2.3.4",
     "node-sass": "3.4.2",
     "parallelshell": "2.0.0",
+    "path": "0.12.7",
     "react-transform-catch-errors": "1.0.1",
     "react-transform-hmr": "1.0.1",
     "redbox-react": "1.2.0",
@@ -63,9 +67,7 @@
     "webpack-hot-middleware": "2.6.0",
     "yargs": "3.32.0"
   },
-  "keywords:": [
-
-  ],
+  "keywords:": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/heymrcarter/release-dashboard"
