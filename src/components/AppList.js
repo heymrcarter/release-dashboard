@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Cell } from 'react-mdl';
+import Application from './Application';
 
 class AppList extends React.Component {
   constructor (props) {
@@ -11,8 +12,8 @@ class AppList extends React.Component {
   render () {
     const createCell = (app) => {
       return (
-        <Cell col={4} phone={1}>
-          <h3>{app.ApplicationName}</h3>
+        <Cell col={3} phone={1}>
+          <Application AppId={app.ApplicationId} AppName={app.ApplicationName} Releases={app.Releases} />
         </Cell>
       );
     };

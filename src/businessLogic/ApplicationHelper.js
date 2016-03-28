@@ -44,6 +44,30 @@ class ApplicationHelper {
           {
             Id: 6,
             Build: 'Global_20160310_1',
+            StatusName: 'Released',
+            CurrentStageTypeName: 'In Production'
+          }
+        ]
+      },
+      {
+        ApplicationId: 3,
+        ApplicationName: 'CXM_5.0.0',
+        Releases: [
+          {
+            Id: 7,
+            Build: 'CXM_20160315_3',
+            StatusName: 'In progress',
+            CurrentStageTypeName: 'In Development'
+          },
+          {
+            Id: 8,
+            Build: 'CXM_20160315_2',
+            StatusName: 'Rejected',
+            CurrentStageTypeName: 'In Test'
+          },
+          {
+            Id: 7,
+            Build: 'CXM_20160315_1',
             StatusName: 'In progress',
             CurrentStageTypeName: 'In QA'
           }

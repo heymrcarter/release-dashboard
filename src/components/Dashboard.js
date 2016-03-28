@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
   render () {
     return (
       <div className="release-dashboard">
-        <h2>Applications</h2>
+        <h2 className="section-title">Applications</h2>
         <AppList apps={this.apps} />
       </div>
     );
